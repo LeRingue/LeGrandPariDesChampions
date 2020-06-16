@@ -1,71 +1,141 @@
 // Teams
-const A1 = 'Turquie';
-const A2 = 'Italie';
-const A3 = 'Pays de Galles';
-const A4 = 'Suisse';
+const A1 = ['Paris Saint-Germain', 'FRA'];
+const A2 = ['Real Madrid', 'ESP'];
+const A3 = ['Club Brugge', 'BEL'];
+const A4 = ['Galatasaray', 'TUR'];
 
-const B1 = 'Danemark';
-const B2 = 'Finland';
-const B3 = 'Belgique';
-const B4 = 'Russie';
+const B1 = ['Bayern', 'GER'];
+const B2 = ['Tottenham', 'ENG'];
+const B3 = ['Olympiacos', 'GRE'];
+const B4 = ['Crvena zvezda', 'SRB'];
 
-const C1 = 'Pays-Bas';
-const C2 = 'Ukraine';
-const C3 = 'Autriche';
-const C4 = 'PO Winner D';
+const C1 = ['Man. City', 'ENG'];
+const C2 = ['Shakhtar Donetsk', 'UKR'];
+const C3 = ['Dinamo Zagreb', 'CRO'];
+const C4 = ['Atalanta', 'ITA'];
 
-const D1 = 'Angleterre';
-const D2 = 'Croatie';
-const D3 = 'PO winner C';
-const D4 = 'République Tchèque';
+const D1 = ['Juventus', 'ITA'];
+const D2 = ['Atlético', 'ESP'];
+const D3 = ['Leverkusen', 'GER'];
+const D4 = ['Lokomotiv Moskva', 'RUS'];
 
-const E1 = 'Espagne';
-const E2 = 'Suède';
-const E3 = 'Pologne';
-const E4 = 'PO winner B';
+const E1 = ['Liverpool', 'ENG'];
+const E2 = ['Napoli', 'ITA'];
+const E3 = ['Salzburg', 'AUT'];
+const E4 = ['Genk', 'BEL'];
 
-const F1 = 'PO winner A';
-const F2 = 'Portugal';
-const F3 = 'France';
-const F4 = 'Allemagne';
+const F1 = ['Barcelona', 'ESP'];
+const F2 = ['Dortmund', 'GER'];
+const F3 = ['Internazionale', 'ITA'];
+const F4 = ['Slavia Praha', 'CZE'];
+
+const G1 = ['Zenit', 'RUS'];
+const G2 = ['Benfica', 'POR'];
+const G3 = ['Lyon', 'FRA'];
+const G4 = ['Leipzig', 'GER'];
+
+const H1 = ['Chelsea', 'ENG'];
+const H2 = ['Ajax', 'NED'];
+const H3 = ['Valencia', 'ESP'];
+const H4 = ['LOSC', 'FRA'];
 
 let matchArray = [
-  {'group' : 'Groupe A', 'MatchID' : '1', 'date' : "12 juin 2020", 'time' : "21:00", 'teamA' : A1, 'teamB' : A2, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe A', 'MatchID' : '2', 'date' : "13 juin 2020", 'time' : "15:00", 'teamA' : A3, 'teamB' : A4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe A', 'MatchID' : '13', 'date' : "17 juin 2020", 'time' : "18:00", 'teamA' : A1, 'teamB' : A3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe A', 'MatchID' : '14', 'date' : "17 juin 2020", 'time' : "21:00", 'teamA' : A2, 'teamB' : A4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe A', 'MatchID' : '25', 'date' : "21 juin 2020", 'time' : "18:00", 'teamA' : A4, 'teamB' : A1, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe A', 'MatchID' : '26', 'date' : "21 juin 2020", 'time' : "18:00", 'teamA' : A2, 'teamB' : A3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe B', 'MatchID' : '3', 'date' : "13 juin 2020", 'time' : "18:00", 'teamA' : B1, 'teamB' : B2, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe B', 'MatchID' : '4', 'date' : "13 juin 2020", 'time' : "21:00", 'teamA' : B3, 'teamB' : B4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe B', 'MatchID' : '15', 'date' : "17 juin 2020", 'time' : "15:00", 'teamA' : B1, 'teamB' : B3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe B', 'MatchID' : '16', 'date' : "18 juin 2020", 'time' : "18:00", 'teamA' : B2, 'teamB' : B4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe B', 'MatchID' : '27', 'date' : "22 juin 2020", 'time' : "21:00", 'teamA' : B4, 'teamB' : B1, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe B', 'MatchID' : '28', 'date' : "22 juin 2020", 'time' : "21:00", 'teamA' : B2, 'teamB' : B3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe C', 'MatchID' : '5', 'date' : "14 juin 2020", 'time' : "21:00", 'teamA' : C1, 'teamB' : C2, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe C', 'MatchID' : '6', 'date' : "14 juin 2020", 'time' : "18:00", 'teamA' : C3, 'teamB' : C4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe C', 'MatchID' : '17', 'date' : "18 juin 2020", 'time' : "21:00", 'teamA' : C1, 'teamB' : C3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe C', 'MatchID' : '18', 'date' : "18 juin 2020", 'time' : "15:00", 'teamA' : C2, 'teamB' : C4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe C', 'MatchID' : '29', 'date' : "22 juin 2020", 'time' : "18:00", 'teamA' : C4, 'teamB' : C1, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe C', 'MatchID' : '30', 'date' : "22 juin 2020", 'time' : "18:00", 'teamA' : C2, 'teamB' : C3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe D', 'MatchID' : '7', 'date' : "14 juin 2020", 'time' : "15:00", 'teamA' : D1, 'teamB' : D2, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe D', 'MatchID' : '8', 'date' : "15 juin 2020", 'time' : "15:00", 'teamA' : D3, 'teamB' : D4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe D', 'MatchID' : '19', 'date' : "19 juin 2020", 'time' : "18:00", 'teamA' : D1, 'teamB' : D3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe D', 'MatchID' : '20', 'date' : "19 juin 2020", 'time' : "21:00", 'teamA' : D2, 'teamB' : D4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe D', 'MatchID' : '31', 'date' : "23 juin 2020", 'time' : "21:00", 'teamA' : D4, 'teamB' : D1, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe D', 'MatchID' : '32', 'date' : "23 juin 2020", 'time' : "21:00", 'teamA' : D2, 'teamB' : D3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe E', 'MatchID' : '9', 'date' : "15 juin 2020", 'time' : "21:00", 'teamA' : E1, 'teamB' : E2, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe E', 'MatchID' : '10', 'date' : "15 juin 2020", 'time' : "18:00", 'teamA' : E3, 'teamB' : E4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe E', 'MatchID' : '21', 'date' : "19 juin 2020", 'time' : "15:00", 'teamA' : E1, 'teamB' : E3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe E', 'MatchID' : '22', 'date' : "20 juin 2020", 'time' : "21:00", 'teamA' : E2, 'teamB' : E4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe E', 'MatchID' : '33', 'date' : "24 juin 2020", 'time' : "18:00", 'teamA' : E4, 'teamB' : E1, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe E', 'MatchID' : '34', 'date' : "24 juin 2020", 'time' : "18:00", 'teamA' : E2, 'teamB' : E3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe F', 'MatchID' : '11', 'date' : "16 juin 2020", 'time' : "18:00", 'teamA' : F1, 'teamB' : F2, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe F', 'MatchID' : '12', 'date' : "16 juin 2020", 'time' : "21:00", 'teamA' : F3, 'teamB' : F4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe F', 'MatchID' : '23', 'date' : "20 juin 2020", 'time' : "15:00", 'teamA' : F1, 'teamB' : F3, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe F', 'MatchID' : '24', 'date' : "20 juin 2020", 'time' : "18:00", 'teamA' : F2, 'teamB' : F4, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe F', 'MatchID' : '35', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : F4, 'teamB' : F1, 'scoreA' : "", 'scoreB' : ""},
-  {'group' : 'Groupe F', 'MatchID' : '36', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : F2, 'teamB' : F3, 'scoreA' : "", 'scoreB' : ""}
+  {'group' : 'Groupe A', 'MatchID' : '1', 'date' : "12 juin 2020", 'time' : "21:00", 'teamA' : A1[0], 'teamB' : A2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '2', 'date' : "13 juin 2020", 'time' : "15:00", 'teamA' : A3[0], 'teamB' : A4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '13', 'date' : "17 juin 2020", 'time' : "18:00", 'teamA' : A1[0], 'teamB' : A3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '14', 'date' : "17 juin 2020", 'time' : "21:00", 'teamA' : A2[0], 'teamB' : A4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '25', 'date' : "21 juin 2020", 'time' : "18:00", 'teamA' : A4[0], 'teamB' : A1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '26', 'date' : "21 juin 2020", 'time' : "18:00", 'teamA' : A2[0], 'teamB' : A3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '1', 'date' : "12 juin 2020", 'time' : "21:00", 'teamA' : A1[0], 'teamB' : A2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '2', 'date' : "13 juin 2020", 'time' : "15:00", 'teamA' : A3[0], 'teamB' : A4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '13', 'date' : "17 juin 2020", 'time' : "18:00", 'teamA' : A1[0], 'teamB' : A3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '14', 'date' : "17 juin 2020", 'time' : "21:00", 'teamA' : A2[0], 'teamB' : A4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '25', 'date' : "21 juin 2020", 'time' : "18:00", 'teamA' : A4[0], 'teamB' : A1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe A', 'MatchID' : '26', 'date' : "21 juin 2020", 'time' : "18:00", 'teamA' : A2[0], 'teamB' : A3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '3', 'date' : "13 juin 2020", 'time' : "18:00", 'teamA' : B1[0], 'teamB' : B2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '4', 'date' : "13 juin 2020", 'time' : "21:00", 'teamA' : B3[0], 'teamB' : B4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '15', 'date' : "17 juin 2020", 'time' : "15:00", 'teamA' : B1[0], 'teamB' : B3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '16', 'date' : "18 juin 2020", 'time' : "18:00", 'teamA' : B2[0], 'teamB' : B4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '27', 'date' : "22 juin 2020", 'time' : "21:00", 'teamA' : B4[0], 'teamB' : B1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '28', 'date' : "22 juin 2020", 'time' : "21:00", 'teamA' : B2[0], 'teamB' : B3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '3', 'date' : "13 juin 2020", 'time' : "18:00", 'teamA' : B1[0], 'teamB' : B2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '4', 'date' : "13 juin 2020", 'time' : "21:00", 'teamA' : B3[0], 'teamB' : B4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '15', 'date' : "17 juin 2020", 'time' : "15:00", 'teamA' : B1[0], 'teamB' : B3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '16', 'date' : "18 juin 2020", 'time' : "18:00", 'teamA' : B2[0], 'teamB' : B4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '27', 'date' : "22 juin 2020", 'time' : "21:00", 'teamA' : B4[0], 'teamB' : B1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe B', 'MatchID' : '28', 'date' : "22 juin 2020", 'time' : "21:00", 'teamA' : B2[0], 'teamB' : B3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '5', 'date' : "14 juin 2020", 'time' : "21:00", 'teamA' : C1[0], 'teamB' : C2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '6', 'date' : "14 juin 2020", 'time' : "18:00", 'teamA' : C3[0], 'teamB' : C4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '17', 'date' : "18 juin 2020", 'time' : "21:00", 'teamA' : C1[0], 'teamB' : C3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '18', 'date' : "18 juin 2020", 'time' : "15:00", 'teamA' : C2[0], 'teamB' : C4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '29', 'date' : "22 juin 2020", 'time' : "18:00", 'teamA' : C4[0], 'teamB' : C1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '30', 'date' : "22 juin 2020", 'time' : "18:00", 'teamA' : C2[0], 'teamB' : C3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '5', 'date' : "14 juin 2020", 'time' : "21:00", 'teamA' : C1[0], 'teamB' : C2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '6', 'date' : "14 juin 2020", 'time' : "18:00", 'teamA' : C3[0], 'teamB' : C4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '17', 'date' : "18 juin 2020", 'time' : "21:00", 'teamA' : C1[0], 'teamB' : C3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '18', 'date' : "18 juin 2020", 'time' : "15:00", 'teamA' : C2[0], 'teamB' : C4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '29', 'date' : "22 juin 2020", 'time' : "18:00", 'teamA' : C4[0], 'teamB' : C1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe C', 'MatchID' : '30', 'date' : "22 juin 2020", 'time' : "18:00", 'teamA' : C2[0], 'teamB' : C3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '7', 'date' : "14 juin 2020", 'time' : "15:00", 'teamA' : D1[0], 'teamB' : D2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '8', 'date' : "15 juin 2020", 'time' : "15:00", 'teamA' : D3[0], 'teamB' : D4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '19', 'date' : "19 juin 2020", 'time' : "18:00", 'teamA' : D1[0], 'teamB' : D3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '20', 'date' : "19 juin 2020", 'time' : "21:00", 'teamA' : D2[0], 'teamB' : D4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '31', 'date' : "23 juin 2020", 'time' : "21:00", 'teamA' : D4[0], 'teamB' : D1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '32', 'date' : "23 juin 2020", 'time' : "21:00", 'teamA' : D2[0], 'teamB' : D3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '7', 'date' : "14 juin 2020", 'time' : "15:00", 'teamA' : D1[0], 'teamB' : D2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '8', 'date' : "15 juin 2020", 'time' : "15:00", 'teamA' : D3[0], 'teamB' : D4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '19', 'date' : "19 juin 2020", 'time' : "18:00", 'teamA' : D1[0], 'teamB' : D3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '20', 'date' : "19 juin 2020", 'time' : "21:00", 'teamA' : D2[0], 'teamB' : D4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '31', 'date' : "23 juin 2020", 'time' : "21:00", 'teamA' : D4[0], 'teamB' : D1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe D', 'MatchID' : '32', 'date' : "23 juin 2020", 'time' : "21:00", 'teamA' : D2[0], 'teamB' : D3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '9', 'date' : "15 juin 2020", 'time' : "21:00", 'teamA' : E1[0], 'teamB' : E2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '10', 'date' : "15 juin 2020", 'time' : "18:00", 'teamA' : E3[0], 'teamB' : E4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '21', 'date' : "19 juin 2020", 'time' : "15:00", 'teamA' : E1[0], 'teamB' : E3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '22', 'date' : "20 juin 2020", 'time' : "21:00", 'teamA' : E2[0], 'teamB' : E4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '33', 'date' : "24 juin 2020", 'time' : "18:00", 'teamA' : E4[0], 'teamB' : E1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '34', 'date' : "24 juin 2020", 'time' : "18:00", 'teamA' : E2[0], 'teamB' : E3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '9', 'date' : "15 juin 2020", 'time' : "21:00", 'teamA' : E1[0], 'teamB' : E2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '10', 'date' : "15 juin 2020", 'time' : "18:00", 'teamA' : E3[0], 'teamB' : E4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '21', 'date' : "19 juin 2020", 'time' : "15:00", 'teamA' : E1[0], 'teamB' : E3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '22', 'date' : "20 juin 2020", 'time' : "21:00", 'teamA' : E2[0], 'teamB' : E4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '33', 'date' : "24 juin 2020", 'time' : "18:00", 'teamA' : E4[0], 'teamB' : E1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe E', 'MatchID' : '34', 'date' : "24 juin 2020", 'time' : "18:00", 'teamA' : E2[0], 'teamB' : E3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '11', 'date' : "16 juin 2020", 'time' : "18:00", 'teamA' : F1[0], 'teamB' : F2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '12', 'date' : "16 juin 2020", 'time' : "21:00", 'teamA' : F3[0], 'teamB' : F4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '23', 'date' : "20 juin 2020", 'time' : "15:00", 'teamA' : F1[0], 'teamB' : F3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '24', 'date' : "20 juin 2020", 'time' : "18:00", 'teamA' : F2[0], 'teamB' : F4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '35', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : F4[0], 'teamB' : F1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '36', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : F2[0], 'teamB' : F3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '11', 'date' : "16 juin 2020", 'time' : "18:00", 'teamA' : F1[0], 'teamB' : F2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '12', 'date' : "16 juin 2020", 'time' : "21:00", 'teamA' : F3[0], 'teamB' : F4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '23', 'date' : "20 juin 2020", 'time' : "15:00", 'teamA' : F1[0], 'teamB' : F3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '24', 'date' : "20 juin 2020", 'time' : "18:00", 'teamA' : F2[0], 'teamB' : F4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '35', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : F4[0], 'teamB' : F1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe F', 'MatchID' : '36', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : F2[0], 'teamB' : F3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '11', 'date' : "16 juin 2020", 'time' : "18:00", 'teamA' : G1[0], 'teamB' : G2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '12', 'date' : "16 juin 2020", 'time' : "21:00", 'teamA' : G3[0], 'teamB' : G4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '23', 'date' : "20 juin 2020", 'time' : "15:00", 'teamA' : G1[0], 'teamB' : G3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '24', 'date' : "20 juin 2020", 'time' : "18:00", 'teamA' : G2[0], 'teamB' : G4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '35', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : G4[0], 'teamB' : G1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '36', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : G2[0], 'teamB' : G3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '11', 'date' : "16 juin 2020", 'time' : "18:00", 'teamA' : G1[0], 'teamB' : G2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '12', 'date' : "16 juin 2020", 'time' : "21:00", 'teamA' : G3[0], 'teamB' : G4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '23', 'date' : "20 juin 2020", 'time' : "15:00", 'teamA' : G1[0], 'teamB' : G3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '24', 'date' : "20 juin 2020", 'time' : "18:00", 'teamA' : G2[0], 'teamB' : G4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '35', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : G4[0], 'teamB' : G1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe G', 'MatchID' : '36', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : G2[0], 'teamB' : G3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '11', 'date' : "16 juin 2020", 'time' : "18:00", 'teamA' : H1[0], 'teamB' : H2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '12', 'date' : "16 juin 2020", 'time' : "21:00", 'teamA' : H3[0], 'teamB' : H4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '23', 'date' : "20 juin 2020", 'time' : "15:00", 'teamA' : H1[0], 'teamB' : H3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '24', 'date' : "20 juin 2020", 'time' : "18:00", 'teamA' : H2[0], 'teamB' : H4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '35', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : H4[0], 'teamB' : H1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '36', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : H2[0], 'teamB' : H3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '11', 'date' : "16 juin 2020", 'time' : "18:00", 'teamA' : H1[0], 'teamB' : H2[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '12', 'date' : "16 juin 2020", 'time' : "21:00", 'teamA' : H3[0], 'teamB' : H4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '23', 'date' : "20 juin 2020", 'time' : "15:00", 'teamA' : H1[0], 'teamB' : H3[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '24', 'date' : "20 juin 2020", 'time' : "18:00", 'teamA' : H2[0], 'teamB' : H4[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '35', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : H4[0], 'teamB' : H1[0], 'scoreA' : "", 'scoreB' : ""},
+  {'group' : 'Groupe H', 'MatchID' : '36', 'date' : "24 juin 2020", 'time' : "21:00", 'teamA' : H2[0], 'teamB' : H3[0], 'scoreA' : "", 'scoreB' : ""}
 ];
 
 let GroupArray = [

@@ -1,29 +1,38 @@
 document.addEventListener('keydown', logKey);
 
-const matchNumberList = ["matchID1", "matchID2", "matchID3", "matchID4", "matchID5", "matchID6",
-                          "matchID7", "matchID8", "matchID9", "matchID10", "matchID11", "matchID12",
-                          "matchID13", "matchID14", "matchID15", "matchID16", "matchID17", "matchID18",
-                          "matchID19", "matchID20", "matchID21", "matchID22", "matchID23", "matchID24",
-                          "matchID25", "matchID26", "matchID27", "matchID28", "matchID29", "matchID30",
-                          "matchID31", "matchID32", "matchID33", "matchID34", "matchID35", "matchID36"];
-const scoreAList = ["score1A", "score2A", "score3A", "score4A", "score5A", "score6A",
-                    "score7A", "score8A", "score9A", "score10A", "score11A", "score12A",
-                    "score13A", "score14A", "score15A", "score16A", "score17A", "score18A",
-                    "score19A", "score20A", "score21A", "score22A", "score23A", "score24A",
-                    "score25A", "score26A", "score27A", "score28A", "score29A", "score30A",
-                    "score31A", "score32A", "score33A", "score34A", "score35A", "score36A"];
-const scoreBList = ["score1B", "score2B", "score3B", "score4B", "score5B", "score6B",
-                    "score7B", "score8B", "score9B", "score10B", "score11B", "score12B",
-                    "score13B", "score14B", "score15B", "score16B", "score17B", "score18B",
-                    "score19B", "score20B", "score21B", "score22B", "score23B", "score24B",
-                    "score25B", "score26B", "score27B", "score28B", "score29B", "score30B",
-                    "score31B", "score32B", "score33B", "score34B", "score35B", "score36B"];
-const groupCompo = [['Groupe A', A1, A2, A3, A4],
-                    ['Groupe B', B1, B2, B3, B4],
-                    ['Groupe C', C1, C2, C3, C4],
-                    ['Groupe D', D1, D2, D3, D4],
-                    ['Groupe E', E1, E2, E3, E4],
-                    ['Groupe F', F1, F2, F3, F4]];
+const matchNumberList = ["matchIDA1", "matchIDA2", "matchIDA3", "matchIDA4", "matchIDA5", "matchIDA6", "matchIDA7", "matchIDA8", "matchIDA9", "matchIDA10", "matchIDA11", "matchIDA12",
+                          "matchIDB1", "matchIDB2", "matchIDB3", "matchIDB4", "matchIDB5", "matchIDB6", "matchIDB7", "matchIDB8", "matchIDB9", "matchIDB10", "matchIDB11", "matchIDB12",
+                          "matchIDC1", "matchIDC2", "matchIDC3", "matchIDC4", "matchIDC5", "matchIDC6", "matchIDC7", "matchIDC8", "matchIDC9", "matchIDC10", "matchIDC11", "matchIDC12",
+                          "matchIDD1", "matchIDD2", "matchIDD3", "matchIDD4", "matchIDD5", "matchIDD6", "matchIDD7", "matchIDD8", "matchIDD9", "matchIDD10", "matchIDD11", "matchIDD12",
+                          "matchIDE1", "matchIDE2", "matchIDE3", "matchIDE4", "matchIDE5", "matchIDE6", "matchIDE7", "matchIDE8", "matchIDE9", "matchIDE10", "matchIDE11", "matchIDE12",
+                          "matchIDF1", "matchIDF2", "matchIDF3", "matchIDF4", "matchIDF5", "matchIDF6", "matchIDF7", "matchIDF8", "matchIDF9", "matchIDF10", "matchIDF11", "matchIDF12",
+                          "matchIDG1", "matchIDG2", "matchIDG3", "matchIDG4", "matchIDG5", "matchIDG6", "matchIDG7", "matchIDG8", "matchIDG9", "matchIDG10", "matchIDG11", "matchIDG12",
+                          "matchIDH1", "matchIDH2", "matchIDH3", "matchIDH4", "matchIDH5", "matchIDH6", "matchIDH7", "matchIDH8", "matchIDH9", "matchIDH10", "matchIDH11", "matchIDH12"];
+
+const scoreAList = ["scoreA1A", "scoreA2A", "scoreA3A", "scoreA4A", "scoreA5A", "scoreA6A", "scoreA7A", "scoreA8A", "scoreA9A", "scoreA10A", "scoreA11A", "scoreA12A",
+                    "scoreB1A", "scoreB2A", "scoreB3A", "scoreB4A", "scoreB5A", "scoreB6A", "scoreB7A", "scoreB8A", "scoreB9A", "scoreB10A", "scoreB11A", "scoreB12A",
+                    "scoreC1A", "scoreC2A", "scoreC3A", "scoreC4A", "scoreC5A", "scoreC6A", "scoreC7A", "scoreC8A", "scoreC9A", "scoreC10A", "scoreC11A", "scoreC12A",
+                    "scoreD1A", "scoreD2A", "scoreD3A", "scoreD4A", "scoreD5A", "scoreD6A", "scoreD7A", "scoreD8A", "scoreD9A", "scoreD10A", "scoreD11A", "scoreD12A",
+                    "scoreE1A", "scoreE2A", "scoreE3A", "scoreE4A", "scoreE5A", "scoreE6A", "scoreE7A", "scoreE8A", "scoreE9A", "scoreE10A", "scoreE11A", "scoreE12A",
+                    "scoreF1A", "scoreF2A", "scoreF3A", "scoreF4A", "scoreF5A", "scoreF6A", "scoreF7A", "scoreF8A", "scoreF9A", "scoreF10A", "scoreF11A", "scoreF12A",
+                    "scoreG1A", "scoreG2A", "scoreG3A", "scoreG4A", "scoreG5A", "scoreG6A", "scoreG7A", "scoreG8A", "scoreG9A", "scoreG10A", "scoreG11A", "scoreG12A",
+                    "scoreH1A", "scoreH2A", "scoreH3A", "scoreH4A", "scoreH5A", "scoreH6A", "scoreH7A", "scoreH8A", "scoreH9A", "scoreH10A", "scoreH11A", "scoreH12A"];
+const scoreBList = ["scoreA1B", "scoreA2B", "scoreA3B", "scoreA4B", "scoreA5B", "scoreA6B", "scoreA7B", "scoreA8B", "scoreA9B", "scoreA10B", "scoreA11B", "scoreA12B",
+                    "scoreB1B", "scoreB2B", "scoreB3B", "scoreB4B", "scoreB5B", "scoreB6B", "scoreB7B", "scoreB8B", "scoreB9B", "scoreB10B", "scoreB11B", "scoreB12B",
+                    "scoreC1B", "scoreC2B", "scoreC3B", "scoreC4B", "scoreC5B", "scoreC6B", "scoreC7B", "scoreC8B", "scoreC9B", "scoreC10B", "scoreC11B", "scoreC12B",
+                    "scoreD1B", "scoreD2B", "scoreD3B", "scoreD4B", "scoreD5B", "scoreD6B", "scoreD7B", "scoreD8B", "scoreD9B", "scoreD10B", "scoreD11B", "scoreD12B",
+                    "scoreE1B", "scoreE2B", "scoreE3B", "scoreE4B", "scoreE5B", "scoreE6B", "scoreE7B", "scoreE8B", "scoreE9B", "scoreE10B", "scoreE11B", "scoreE12B",
+                    "scoreF1B", "scoreF2B", "scoreF3B", "scoreF4B", "scoreF5B", "scoreF6B", "scoreF7B", "scoreF8B", "scoreF9B", "scoreF10B", "scoreF11B", "scoreF12B",
+                    "scoreG1B", "scoreG2B", "scoreG3B", "scoreG4B", "scoreG5B", "scoreG6B", "scoreG7B", "scoreG8B", "scoreG9B", "scoreG10B", "scoreG11B", "scoreG12B",
+                    "scoreH1B", "scoreH2B", "scoreH3B", "scoreH4B", "scoreH5B", "scoreH6B", "scoreH7B", "scoreH8B", "scoreH9B", "scoreH10B", "scoreH11B", "scoreH12B"];
+const groupCompo = [['Groupe A', A1[0], A2[0], A3[0], A4[0]],
+                    ['Groupe B', B1[0], B2[0], B3[0], B4[0]],
+                    ['Groupe C', C1[0], C2[0], C3[0], C4[0]],
+                    ['Groupe D', D1[0], D2[0], D3[0], D4[0]],
+                    ['Groupe E', E1[0], E2[0], E3[0], E4[0]],
+                    ['Groupe F', F1[0], F2[0], F3[0], F4[0]],
+                    ['Groupe G', G1[0], G2[0], G3[0], G4[0]],
+                    ['Groupe H', H1[0], H2[0], H3[0], H4[0]]];
 const GroupRankingInit = [
   {'group' : '', 'rank' : 1, 'team' : '', 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
   {'group' : '', 'rank' : 1, 'team' : '', 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
@@ -31,42 +40,55 @@ const GroupRankingInit = [
   {'group' : '', 'rank' : 1, 'team' : '', 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
 ];
 let GroupARanking = [
-  {'group' : 'Groupe A', 'rank' : 1, 'team' : A1, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe A', 'rank' : 1, 'team' : A2, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe A', 'rank' : 1, 'team' : A3, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe A', 'rank' : 1, 'team' : A4, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
+  {'group' : 'Groupe A', 'rank' : 1, 'team' : A1[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe A', 'rank' : 1, 'team' : A2[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe A', 'rank' : 1, 'team' : A3[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe A', 'rank' : 1, 'team' : A4[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
 ];
 let GroupBRanking = [
-  {'group' : 'Groupe B', 'rank' : 1, 'team' : B1, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe B', 'rank' : 1, 'team' : B2, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe B', 'rank' : 1, 'team' : B3, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe B', 'rank' : 1, 'team' : B4, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
+  {'group' : 'Groupe B', 'rank' : 1, 'team' : B1[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe B', 'rank' : 1, 'team' : B2[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe B', 'rank' : 1, 'team' : B3[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe B', 'rank' : 1, 'team' : B4[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
 ];
 let GroupCRanking = [
-  {'group' : 'Groupe C', 'rank' : 1, 'team' : C1, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe C', 'rank' : 1, 'team' : C2, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe C', 'rank' : 1, 'team' : C3, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe C', 'rank' : 1, 'team' : C4, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
+  {'group' : 'Groupe C', 'rank' : 1, 'team' : C1[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe C', 'rank' : 1, 'team' : C2[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe C', 'rank' : 1, 'team' : C3[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe C', 'rank' : 1, 'team' : C4[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
 ];
 let GroupDRanking = [
-  {'group' : 'Groupe D', 'rank' : 1, 'team' : D1, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe D', 'rank' : 1, 'team' : D2, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe D', 'rank' : 1, 'team' : D3, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe D', 'rank' : 1, 'team' : D4, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
+  {'group' : 'Groupe D', 'rank' : 1, 'team' : D1[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe D', 'rank' : 1, 'team' : D2[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe D', 'rank' : 1, 'team' : D3[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe D', 'rank' : 1, 'team' : D4[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
 ];
 let GroupERanking = [
-  {'group' : 'Groupe E', 'rank' : 1, 'team' : E1, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe E', 'rank' : 1, 'team' : E2, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe E', 'rank' : 1, 'team' : E3, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe E', 'rank' : 1, 'team' : E4, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
+  {'group' : 'Groupe E', 'rank' : 1, 'team' : E1[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe E', 'rank' : 1, 'team' : E2[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe E', 'rank' : 1, 'team' : E3[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe E', 'rank' : 1, 'team' : E4[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
 ];
 let GroupFRanking = [
-  {'group' : 'Groupe F', 'rank' : 1, 'team' : F1, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe F', 'rank' : 1, 'team' : F2, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe F', 'rank' : 1, 'team' : F3, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
-  {'group' : 'Groupe F', 'rank' : 1, 'team' : F4, 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
+  {'group' : 'Groupe F', 'rank' : 1, 'team' : F1[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe F', 'rank' : 1, 'team' : F2[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe F', 'rank' : 1, 'team' : F3[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe F', 'rank' : 1, 'team' : F4[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
 ];
-const GroupRankingList = [GroupARanking, GroupBRanking, GroupCRanking, GroupDRanking, GroupERanking, GroupFRanking];
+let GroupGRanking = [
+  {'group' : 'Groupe G', 'rank' : 1, 'team' : G1[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe G', 'rank' : 1, 'team' : G2[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe G', 'rank' : 1, 'team' : G3[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe G', 'rank' : 1, 'team' : G4[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
+];
+let GroupHRanking = [
+  {'group' : 'Groupe H', 'rank' : 1, 'team' : H1[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe H', 'rank' : 1, 'team' : H2[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe H', 'rank' : 1, 'team' : H3[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0},
+  {'group' : 'Groupe H', 'rank' : 1, 'team' : H4[0], 'played' : 0, 'pts' : 0, 'BP' : 0, 'BM' : 0, 'GA' : 0}
+];
+
+const GroupRankingList = [GroupARanking, GroupBRanking, GroupCRanking, GroupDRanking, GroupERanking, GroupFRanking, GroupGRanking, GroupHRanking];
 
 const RoundOf16Score = ['scoreRo161A', 'scoreRo161B', 'scoreRo162A', 'scoreRo162B', 'scoreRo163A', 'scoreRo163B', 'scoreRo164A', 'scoreRo164B', 'scoreRo165A', 'scoreRo165B', 'scoreRo166A', 'scoreRo166B', 'scoreRo167A', 'scoreRo167B', 'scoreRo168A', 'scoreRo168B'];
 const RoundOf16Team = ['Ro16B1', 'Ro16ADEF3', 'Ro16A1', 'Ro16C2', 'Ro16F1', 'Ro16ABC3', 'Ro16D2', 'Ro16E2', 'Ro16E1', 'Ro16ABCD3', 'Ro16D1', 'Ro16F2', 'Ro16C1', 'Ro16DEF3', 'Ro16A2', 'Ro16B2'];
@@ -80,16 +102,20 @@ const RoundOf4Score = ['scoreRo41A', 'scoreRo41B', 'scoreRo42A', 'scoreRo42B'];
 const RoundOf4Team = ['Ro41', 'Ro42', 'Ro43', 'Ro44'];
 const RoundOf4Winner = ['Ro21', 'Ro22'];
 
-const FormComplete = ["score1A", "score1B", "score2A", "score2B", "score3A", "score3B", "score4A", "score4B", "score5A", "score5B", "score6A", "score6B", "score7A", "score7B", "score8A", "score8B", "score9A", "score9B", "score10A", "score10B",
-                          "score11A", "score11B", "score12A", "score12B", "score13A", "score13B", "score14A", "score14B", "score15A", "score15B", "score16A", "score16B", "score17A", "score17B", "score18A", "score18B", "score19A", "score19B", "score20A", "score20B",
-                          "score21A", "score21B", "score22A", "score22B", "score23A", "score23B", "score24A", "score24B", "score25A", "score25B", "score26A", "score26B", "score27A", "score27B", "score28A", "score28B", "score29A", "score29B", "score30A", "score30B",
-                          "score31A", "score31B", "score32A", "score32B", "score33A", "score33B", "score34A", "score34B", "score35A", "score35B", "score36A", "score36B",
-                          "scoreRo161A", "scoreRo161B", "scoreRo162A", "scoreRo162B", "scoreRo163A", "scoreRo163B", "scoreRo164A", "scoreRo164B", "scoreRo165A", "scoreRo165B", "scoreRo166A", "scoreRo166B", "scoreRo167A", "scoreRo167B", "scoreRo168A", "scoreRo168B",
-                          "scoreRo81A", "scoreRo81B", "scoreRo82A", "scoreRo82B", "scoreRo83A", "scoreRo83B", "scoreRo84A", "scoreRo84B",
-                          "scoreRo41A", "scoreRo41B", "scoreRo42A", "scoreRo42B",
-                          "scoreFinalA", "scoreFinalB",
-                          "Stricker",
-                          "name", "email"];
+const FormComplete = ["scoreA1A", "scoreA1B", "scoreA2A", "scoreA2B", "scoreA3A", "scoreA3B", "scoreA4A", "scoreA4B", "scoreA5A", "scoreA5B", "scoreA6A", "scoreA6B", "scoreA7A", "scoreA7B", "scoreA8A", "scoreA8B", "scoreA9A", "scoreA9B", "scoreA10A", "scoreA10B", "scoreA11A", "scoreA11B", "scoreA12A", "scoreA12B",
+                      "scoreB1A", "scoreB1B", "scoreB2A", "scoreB2B", "scoreB3A", "scoreB3B", "scoreB4A", "scoreB4B", "scoreB5A", "scoreB5B", "scoreB6A", "scoreB6B", "scoreB7A", "scoreB7B", "scoreB8A", "scoreB8B", "scoreB9A", "scoreB9B", "scoreB10A", "scoreB10B", "scoreB11A", "scoreB11B", "scoreB12A", "scoreB12B",
+                      "scoreC1A", "scoreC1B", "scoreC2A", "scoreC2B", "scoreC3A", "scoreC3B", "scoreC4A", "scoreC4B", "scoreC5A", "scoreC5B", "scoreC6A", "scoreC6B", "scoreC7A", "scoreC7B", "scoreC8A", "scoreC8B", "scoreC9A", "scoreC9B", "scoreC10A", "scoreC10B", "scoreC11A", "scoreC11B", "scoreC12A", "scoreC12B",
+                      "scoreD1A", "scoreD1B", "scoreD2A", "scoreD2B", "scoreD3A", "scoreD3B", "scoreD4A", "scoreD4B", "scoreD5A", "scoreD5B", "scoreD6A", "scoreD6B", "scoreD7A", "scoreD7B", "scoreD8A", "scoreD8B", "scoreD9A", "scoreD9B", "scoreD10A", "scoreD10B", "scoreD11A", "scoreD11B", "scoreD12A", "scoreD12B",
+                      "scoreE1A", "scoreE1B", "scoreE2A", "scoreE2B", "scoreE3A", "scoreE3B", "scoreE4A", "scoreE4B", "scoreE5A", "scoreE5B", "scoreE6A", "scoreE6B", "scoreE7A", "scoreE7B", "scoreE8A", "scoreE8B", "scoreE9A", "scoreE9B", "scoreE10A", "scoreE10B", "scoreE11A", "scoreE11B", "scoreE12A", "scoreE12B",
+                      "scoreF1A", "scoreF1B", "scoreF2A", "scoreF2B", "scoreF3A", "scoreF3B", "scoreF4A", "scoreF4B", "scoreF5A", "scoreF5B", "scoreF6A", "scoreF6B", "scoreF7A", "scoreF7B", "scoreF8A", "scoreF8B", "scoreF9A", "scoreF9B", "scoreF10A", "scoreF10B", "scoreF11A", "scoreF11B", "scoreF12A", "scoreF12B",
+                      "scoreG1A", "scoreG1B", "scoreG2A", "scoreG2B", "scoreG3A", "scoreG3B", "scoreG4A", "scoreG4B", "scoreG5A", "scoreG5B", "scoreG6A", "scoreG6B", "scoreG7A", "scoreG7B", "scoreG8A", "scoreG8B", "scoreG9A", "scoreG9B", "scoreG10A", "scoreG10B", "scoreG11A", "scoreG11B", "scoreG12A", "scoreG12B",
+                      "scoreH1A", "scoreH1B", "scoreH2A", "scoreH2B", "scoreH3A", "scoreH3B", "scoreH4A", "scoreH4B", "scoreH5A", "scoreH5B", "scoreH6A", "scoreH6B", "scoreH7A", "scoreH7B", "scoreH8A", "scoreH8B", "scoreH9A", "scoreH9B", "scoreH10A", "scoreH10B", "scoreH11A", "scoreH11B", "scoreH12A", "scoreH12B",
+                      "scoreRo161A", "scoreRo161B", "scoreRo162A", "scoreRo162B", "scoreRo163A", "scoreRo163B", "scoreRo164A", "scoreRo164B", "scoreRo165A", "scoreRo165B", "scoreRo166A", "scoreRo166B", "scoreRo167A", "scoreRo167B", "scoreRo168A", "scoreRo168B",
+                      "scoreRo81A", "scoreRo81B", "scoreRo82A", "scoreRo82B", "scoreRo83A", "scoreRo83B", "scoreRo84A", "scoreRo84B",
+                      "scoreRo41A", "scoreRo41B", "scoreRo42A", "scoreRo42B",
+                      "scoreFinalA", "scoreFinalB",
+                      "Stricker",
+                      "name", "email"];
 // const FormComplete = ["name", "email"];
 
 function UpdateGroupDisplay(Group) {
@@ -286,7 +312,69 @@ function UpdateGroupDisplay(Group) {
       r4BM = rF4BM;
       r4GA = rF4GA;
       break;
-    }
+    case 6:
+      GroupRanking = GroupGRanking;
+      rank1 = rankG1;
+      r1team = rG1team;
+      r1played = rG1played;
+      r1pts = rG1pts;
+      r1BP = rG1BP;
+      r1BM = rG1BM;
+      r1GA = rG1GA;
+      rank2 = rankG2;
+      r2team = rG2team;
+      r2played = rG2played;
+      r2pts = rG2pts;
+      r2BP = rG2BP;
+      r2BM = rG2BM;
+      r2GA = rG2GA;
+      rank3 = rankG3;
+      r3team = rG3team;
+      r3played = rG3played;
+      r3pts = rG3pts;
+      r3BP = rG3BP;
+      r3BM = rG3BM;
+      r3GA = rG3GA;
+      rank4 = rankG4;
+      r4team = rG4team;
+      r4played = rG4played;
+      r4pts = rG4pts;
+      r4BP = rG4BP;
+      r4BM = rG4BM;
+      r4GA = rG4GA;
+      break;
+    case 7:
+      GroupRanking = GroupHRanking;
+      rank1 = rankH1;
+      r1team = rH1team;
+      r1played = rH1played;
+      r1pts = rH1pts;
+      r1BP = rH1BP;
+      r1BM = rH1BM;
+      r1GA = rH1GA;
+      rank2 = rankH2;
+      r2team = rH2team;
+      r2played = rH2played;
+      r2pts = rH2pts;
+      r2BP = rH2BP;
+      r2BM = rH2BM;
+      r2GA = rH2GA;
+      rank3 = rankH3;
+      r3team = rH3team;
+      r3played = rH3played;
+      r3pts = rH3pts;
+      r3BP = rH3BP;
+      r3BM = rH3BM;
+      r3GA = rH3GA;
+      rank4 = rankH4;
+      r4team = rH4team;
+      r4played = rH4played;
+      r4pts = rH4pts;
+      r4BP = rH4BP;
+      r4BM = rH4BM;
+      r4GA = rH4GA;
+      break;
+  }
 
   // Display Rank
   //------------------------------------------------------------------------------------------------
@@ -405,12 +493,12 @@ function ComputeRank(GroupRanking){
 }
 
 function IsGroupCompleted(GroupRanking){
-  // Check if all teams have played 3 games (12 in total)
+  // Check if all teams have played 3 games (24 in total)
   let games = GroupRanking[0]['played'] +
               GroupRanking[1]['played'] +
               GroupRanking[2]['played'] +
               GroupRanking[3]['played'];
-  return (games == 12) ? true : false;
+  return (games == 24) ? true : false;
 }
 
 function GroupToRoundOf16(Group, GroupRanking){
@@ -531,6 +619,8 @@ function logKey(e) {
   ResetGroupRanking("D", GroupDRanking);
   ResetGroupRanking("E", GroupERanking);
   ResetGroupRanking("F", GroupFRanking);
+  ResetGroupRanking("G", GroupGRanking);
+  ResetGroupRanking("H", GroupHRanking);
 
   // Check form entries that are set
   for (let num = 0; num < matchNumberList.length; num++){
@@ -574,6 +664,12 @@ function logKey(e) {
           break;
         case 'Groupe F':
           indexGroup = 5;
+          break;
+        case 'Groupe G':
+          indexGroup = 6;
+          break;
+        case 'Groupe H':
+          indexGroup = 7;
           break;
       }
 
