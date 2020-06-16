@@ -1,0 +1,321 @@
+html, body, header, main, footer, div, nav, section, label, table, input{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* background-color: rgba(0,0,0,.1); */
+  /* background-color: lightblue; */
+  /* background-color: #C4E8C8; */
+  /* color: #3A5FCD; */
+}
+
+body{
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  background-image: url("../img/Champions.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /*background-origin: border-box;*/
+  background-attachment: fixed;
+}
+
+header{
+  width: 100%;
+  height: 5vh;
+  font-size: 3rem;
+  background-size: cover;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.FillerHead{
+  height: 5vh;
+  width: 100%;
+}
+
+main{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  /* flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start; */
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+nav{
+  /* width: 100%;
+  height: 5vh; */
+  width: 7%;
+  height: 30vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+nav>section {
+  position: fixed;
+  display: none;
+  top: 10vh;
+  left: 2vw;
+  width: 100vw;
+}
+
+label {
+  width: 100%;
+  /* display: flex; */
+  display: block;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  border: .2rem solid lightblue;
+}
+
+.file_mgt{
+  width: 10%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  font-size: 1rem;
+  border: .2rem solid lightblue;
+}
+
+label:hover {
+  background-color: #6DC990;
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + .Group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+table {
+  table-layout: auto;
+  width: 45%;
+  height: 30vh;
+  /* column-width: fixed; */
+  border: 2px solid lightblue;
+}
+
+/* #FinalRound{ */
+main>section{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  position: fixed;
+  top: 40vh;
+  width: 100%;
+  height: 50vh;
+  /* border: 2px solid orange; */
+}
+
+.RoundOfX{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 25%;
+  height: 100%;
+  /* column-width: 50px; */
+  border: 2px solid lightblue;
+}
+
+.Finale{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 25%;
+  height: 40vh;
+  position: fixed;
+  top: 40vh;
+  left: 75%;
+  /* column-width: 50px; */
+  border: 2px solid lightblue;
+}
+
+.Stricker{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  width: 25%;
+  height: 10vh;
+  position: fixed;
+  top: 80vh;
+  left: 75%;
+  /* column-width: 50px; */
+  border: 2px solid lightblue;
+}
+
+.validation{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 5vh;
+  position: fixed;
+  top: 90vh;
+  left: 0%;
+  /* column-width: 50px; */
+  /* border: 2px solid darkblue; */
+}
+
+/* h1{
+  position: fixed;
+  top: 0vh;
+  left: 0vh;
+
+} */
+
+div{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  width: 35%;
+  height: 8%;
+  /* border: 2px solid green; */
+}
+
+div[class="score"]{
+  /* display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center; */
+  width: 8%;
+  height: 8%;
+  /* border: 2px solid red; */
+}
+
+div[class="Strick"]{
+  align-content: flex-end;
+  width: 60%;
+  height: 10%;
+  /* border: 2px solid red; */
+}
+
+div[class="dash"]{
+  width: 5%;
+}
+
+
+div[class="FillerOf8"]{
+  width: 100%;
+  font-size: 1.25rem;
+  height: 5%;
+  /* border: 2px solid pink; */
+}
+
+div[class="F8ID"] {
+  width: 8%;
+  /* font-size: 1rem; */
+}
+
+div[class="FillerOf4"]{
+  width: 100%;
+  font-size: 1.25rem;
+  /* border: 2px solid pink; */
+  height: 10%;
+
+  vertical-align: top;
+}
+
+td[class="matchIDDisplay"] {
+  width: 5%;
+  column-width: 50px;
+}
+td[class="date1"] {
+  width: 15%;
+  column-width: 100px;
+}
+td[class="hour1"] {
+  width: 5%;
+  column-width: 40px;
+}
+td[class="teamA1"] {
+  width: 30%;
+  column-width: 300px;
+}
+td[class="score1"] {
+  width: 5%;
+  column-width: 10px;
+}
+
+input[class="score"] {
+  width: 50%;
+  column-width: 10px;
+}
+
+td[class="teamB1"] {
+  width: 30%;
+  column-width: 300px;
+}
+
+.rank{
+  width: 10%;
+}
+.rankteam{
+  width: 50%;
+}
+.played{
+  width: 10%;
+}
+.pts{
+  width: 10%;
+}
+.BP{
+  width: 10%;
+}
+.BM{
+  width: 10%;
+}
+.GA{
+  width: 10%;
+}
+
+
+footer{
+  position:fixed;
+  width: 100%;
+  top: 95vh;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input[class="StrickInput"]{
+  width: 100%;
+}
