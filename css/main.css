@@ -3,6 +3,8 @@ html, body, header, main, footer, div, nav, section, label, table, input{
   border: 0;
   margin: 0;
   box-sizing: border-box;
+  /* color: rgba(255, 255, 255, 1); */
+  color: rgba(0, 0, 0, 1);
   /* background-color: rgba(0,0,0,.1); */
   /* background-color: lightblue; */
   /* background-color: #C4E8C8; */
@@ -80,6 +82,23 @@ label {
   border: .2rem solid lightblue;
 }
 
+section>label{
+  width: 40%;
+  display: block;
+  font-size: 1rem;
+  border: none;
+}
+
+input[type="checkbox"] {
+  width: 10%;
+  /* display: none; */
+}
+
+/* input[id="iRo16A1"]:checked ~ label[id="Ro16A1"]{ */
+input[type="checkbox"]:checked + label[class="RoX"]{
+  background-color: #6DC990;
+}
+
 .file_mgt{
   width: 10%;
   display: flex;
@@ -98,6 +117,7 @@ label:hover {
 input[type="radio"] {
   display: none;
 }
+
 input[type="radio"]:checked + .Group {
   display: flex;
   flex-flow: row wrap;
@@ -110,7 +130,6 @@ table {
   table-layout: auto;
   width: 45%;
   height: 50vh;
-  /* column-width: fixed; */
   border: 2px solid lightblue;
 }
 
@@ -252,7 +271,7 @@ td[class="matchIDDisplay"] {
   column-width: 50px;
 }
 td[class="date1"] {
-  width: 15%;
+  width: 25%;
   column-width: 100px;
 }
 td[class="hour1"] {
@@ -260,8 +279,12 @@ td[class="hour1"] {
   column-width: 40px;
 }
 td[class="teamA1"] {
-  width: 30%;
-  column-width: 300px;
+  width: 20%;
+  column-width: 250px;
+}
+td[class="nationA1"] {
+  width: 5%;
+  column-width: 50px;
 }
 td[class="score1"] {
   width: 5%;
@@ -274,15 +297,22 @@ input[class="score"] {
 }
 
 td[class="teamB1"] {
-  width: 30%;
-  column-width: 300px;
+  width: 20%;
+  column-width: 250px;
+}
+td[class="nationB1"] {
+  width: 5%;
+  column-width: 50px;
 }
 
 .rank{
   width: 10%;
 }
 .rankteam{
-  width: 50%;
+  width: 30%;
+}
+.nation{
+  width: 20%;
 }
 .played{
   width: 10%;

@@ -1,23 +1,36 @@
 const LINE_NB = 3;
-const TITLE_LINE = "Le Grand Pari 9";
-const FILE_NAME = 'LeGrandPari9_Prono_';
+const TITLE_LINE = "Le Grand Pari des champions";
+const FILE_NAME = 'LeGrandPariDesChampions_Prono_';
 
 function submit_form(){
   var csv = TITLE_LINE + "\n"; // Title line
-  // Create header
+  // Create header: Groupe matchs
   for (let i = 0; i < FormComplete.length; i++){
     csv += FormComplete[i];
     csv += ',';
   }
+  // Create header: Teams and checkbox status from Round of 16 to Finale
+  for (let i = 0; i < ClickToCsvTeam.length; i++){
+    csv += ClickToCsvTeam[i];
+    csv += ',';
+    csv += ClickToCsvCheckbox[i];
+    csv += ',';
+  }
   csv += "\n";
 
-  // Create data: scores
+  // Create data: scores for groups
   for (let i = 0; i < FormComplete.length; i++){
     csv += document.getElementById(FormComplete[i]).value;
     csv += ',';
   }
-
-  csv += "\n";
+  // Create data: Teams qualified and checkbox status for Round of 16 to final
+  for (let i = 0; i < ClickToCsvTeam.length; i++){
+    csv += document.getElementById(ClickToCsvTeam[i]).textContent;
+    csv += ',';
+    csv += document.getElementById(ClickToCsvCheckbox[i]).checked;
+    csv += ',';
+  }
+  // csv += "\n";
 
   let file_name = FILE_NAME + document.getElementById('name').value + '.csv'
   // console.log(csv);
@@ -100,10 +113,18 @@ function load_form(event){
     // Slice header line into a table
     header = csv_string_to_table(line[1]);
     scores = csv_string_to_table(line[2]);
-    // Fill Element ID with loaded data
-    for (let i = 0; i < header.length; i++){
+    // Fill Element ID with loaded data: scores for all groups (and name and email and stricker)
+    for (let i = 0; i < FormComplete.length; i++){
       document.getElementById(header[i]).value = scores[i];
     }
+    // Fill Round of 16 data (text and checkboxes) to finale
+    for (let i = FormComplete.length; i < header.length; i+=2){
+      document.getElementById(header[i]).textContent = scores[i];
+      if (scores[i+1] == 'true'){
+        document.getElementById(header[i+1]).checked = 'true';
+      }
+    }
+
     // Update group ranking and Rounds of x teams
     logKey();
   };
